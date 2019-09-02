@@ -7,7 +7,9 @@ const bookSchema = new mongoose.Schema({
     publisher: { type: String, required: [true, 'publisher is required']},
     edition: { type: Number, min: 1, required: [true, 'edition is required']},
     quantity: { type: Number, min: 1, required: false, default: 1},
-    available: { type: Boolean, required: false, default: true},
+    amountUsed: { type: Number, required: false, default: 0 },
+    using: { type: Boolean, required: false, default: false},
+    value: {type: Number, required: true},
     created_at: { type: Date, default: Date.now}
 });
 

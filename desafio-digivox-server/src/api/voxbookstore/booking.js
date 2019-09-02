@@ -8,7 +8,8 @@ const bookingSchema = new mongoose.Schema({
     personName: { type: String, required: [true, 'personName is required']},
     retrieveDate: { type: String, required: false},
     delivery: { type: String, required: true},
-    duration: { type: Number, required: true, default: 7, min: 1, max: 30}, // in days
+    duration: { type: Number, required: true, min: 1, max: 30}, // in days
+    value: {type: Number, required: false },
     created_at: { type: Date, default: Date.now}
 });
 
